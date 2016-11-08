@@ -21,6 +21,8 @@ var app = angular.module('mainApp', ['ngRoute'])
     .controller('mainCtrl', function($scope, Storage_Serv) {
         $scope.mainCtrl = this;
 
+        this.i_search = "";
+
         this.favorite_list = [];
         // this.favorite_list.push(new Song('Pensar en nada', 'Los Piojos', 'Huracanes en Luna Plateada'));
         // this.favorite_list.push(new Song('Juntos', 'Pampa Yakuza', 'Naturaleza Revivir'));
