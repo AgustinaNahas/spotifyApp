@@ -6,4 +6,18 @@ export function routes($routeProvider, $locationProvider) {
         requireBase: false,
         rewriteLinks: true,
     });
+
+    $routeProvider
+    .when("/", {
+        templateUrl : "/app/views/index.html"
+    })
+    .when("/artist", {
+        templateUrl : "/app/views/band-albums.html"
+    })
+    .when("/results", {
+        templateUrl : "/app/views/results.html"
+    })
+    .when("/album", {
+        templateUrl : "/app/views/album-detail.html"
+    });
 }
