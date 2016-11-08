@@ -7,7 +7,7 @@
 
 		<div class="search">
 			<i class="material-icons">search</i> 
-			<input type=search class="input-search" ng-model="i_search" placeholder="Type the name of your favorite artist" ng-change="console.log(i_search)">
+			<input type=search class="input-search" ng-model="i_search" placeholder="Type the name of your favorite artist" ng-change="changeView('/artist')">
 		</div>
 	</div>
 	<div class="favorites-container" ng-show="mainCtrl.has_favorites()">
