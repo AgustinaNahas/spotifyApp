@@ -8,26 +8,32 @@ html {
 	font-family: 'Droid Sans';
 }
 
+body {
+	background-image: url('http://colrd.com/misc/library/pattern/DinPattern/coaster.gif');
+	background-attachment: fixed;
+}
+
 .container {
 	margin: 0 auto;
 	width: 99%;
-	height: 100%;
+	height: 98%;
 	position: absolute;
+	background-color: rgba(255, 255, 255, 0.4);
 }
 
 .main-container {
-	margin: 20px 250px 20px 250px;
+	margin: 20px;
 }
 
 .heading {
-	height: 9%;
+	height: 10%;
 	border: 1px solid #dcdcdc;
 	padding-top: 5px;
 	text-align: center;
 }
 
 .main {
-	height: 75%;
+	height: 78%;
 	border: 1px solid #dcdcdc;
 }
 
@@ -36,7 +42,7 @@ p .description {
 }
 
 .footer {
-	height: 9%;
+	height: 10%;
 	border: 1px solid #dcdcdc;
 }
 
@@ -50,7 +56,7 @@ input[type=search] {
 	margin: 0;
 	font-family: 'Droid Sans';
 	width: 100%;
-	font-size: 18px;
+	font-size: 14px;
 	appearance: none;
 	box-shadow: none;
 	border-radius: none;
@@ -78,7 +84,13 @@ input[type=search]:focus, input[type=search].focus {
 }
 
 .search .material-icons { 
-  position: absolute;
-  top: 10px;
-  left: 10px;
+	position: absolute;
+	top: 9px;
+	left: 10px;
+}
+
+.favorite-song {
+	display: inline-block;
+	float: left;
+	width: 33%;
 }

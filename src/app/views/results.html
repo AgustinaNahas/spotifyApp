@@ -1,10 +1,17 @@
-<div class="consigna__container">
-  <h2>ACA TIENEN QUE CARGAR UNA GRILLA CON LOS ARTISTAS QUE APARECIERON COMO RESULTADO DE LA BUSQUEDA ANTERIOR</h2>
-  <img src="https://i.scdn.co/image/445ffa41207f321883fb01f406165801c7f41ef0" alt="">
-  <h4>Cyndi Lauper</h4>
-  <img src="https://i.scdn.co/image/6b86adfb6637e08f76390266b617120e95ad16c0" alt="">
-  <h4>Cindy Bradley</h4>
-  <img src="https://i.scdn.co/image/82633230315fb6b7cc7f4b573bc9e8edf0da69da" alt="">
-  <h4>Cindy Bullens</h4>
-  
+<div class="main-container" ng-controller="mainCtrl">
+	<div class="results-container">
+		<h1>Artists</h1>
+
+		<p class="description"><strong>You are currently searching: {{mainCtrl.string_search}}</strong></p>
+
+		<div class="search">
+			<i class="material-icons">search</i> 
+			<input type=search class="input-search" placeholder="Type the name of your favorite artist" ng-model="i_title">
+		</div>
+	</div>
+	<div class="results-table" ng-repeat="artist in mainCtrl.results_list">
+		<div class="artist-results">
+			<h5>{{artist.name}}</h5>
+		</div>
+	</div>
 </div>
