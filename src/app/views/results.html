@@ -6,9 +6,10 @@
 
 		<div class="search">
 			<i class="material-icons">search</i> 
-			<input ng-model="searchCtrl.stringSearch" ng-change="searchCtrl.search()" type=search class="input-search" placeholder="Type the name of your favorite artist">
+			<input ng-model="searchCtrl.stringSearch" ng-change="searchCtrl.search(searchCtrl.stringSearch)" type=search class="input-search" placeholder="Type the name of your favorite artist">
 		</div>
 	</div>
+	<h5 ng-hide="searchCtrl.resultsNotEmpty()">No hay resultados para mostrar</h5>
 	<div class="results-table" ng-repeat="artist in searchCtrl.resultsList">
 		<div class="artist-results">
 			<h5>{{artist.name}}</h5>
