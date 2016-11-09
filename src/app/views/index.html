@@ -1,4 +1,4 @@
-<div class="main-container" ng-controller="mainCtrl">
+<div class="main-container" ng-controller="favCtrl">
 	<div class="main-search*-container">
 		<p>Welcome to</p>
 		<h1>Spotisearch</h1>
@@ -7,13 +7,12 @@
 
 		<div class="search">
 			<i class="material-icons">search</i> 
-			<input type=search class="input-search" ng-model="i_search" placeholder="Type the name of your favorite artist" ng-change="mainCtrl.changeView('/results')">
-			<a href="/results">Holi</a>
+			<input type=search class="input-search" ng-model="i_search" placeholder="Type the name of your favorite artist" ng-controller="viewCtrl" ng-change="viewCtrl.changeView('/results')">
 		</div>
 	</div>
-	<div class="favorites-container" ng-show="mainCtrl.has_favorites()">
+	<div class="favorites-container" ng-show="favCtrl.has_favorites()">
 		<h2>Favorites</h2>
-		<div class="favorites-table" ng-repeat="song in mainCtrl.favorite_list">
+		<div class="favorites-table" ng-repeat="song in favCtrl.favorite_list()">
 			<div class="favorite-song">
 				<h5>{{song.title}}</h5>
 				<p>Artist: {{song.artist}}</p>

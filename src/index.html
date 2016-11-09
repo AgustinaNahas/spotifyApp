@@ -10,11 +10,11 @@
 <body ng-strict-di>
     <div class="container">
     	<div class="heading">
-    		<img class="header-icon" src="http://www.iconarchive.com/download/i85639/graphicloads/100-flat/zoom-search-2.ico" alt="Spotify search icon">
+    		<a href="/#"><img class="header-icon" src="http://www.iconarchive.com/download/i85639/graphicloads/100-flat/zoom-search-2.ico" alt="Spotify search icon"></a>
     	</div>
 
 	    <div class="main">
-	    	<div ng-view></div>
+	    	<div ng-view ng-controller="viewCtrl"></div>
 	    </div>
 
 	    <div class="footer">

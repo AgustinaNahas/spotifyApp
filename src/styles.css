@@ -76,7 +76,7 @@ input[type=search]:focus, input[type=search].focus {
 
 .search {
 	position: relative;
-	margin: 60px 0 20px 0;
+	margin: 40px 0 20px 0;
 }
 
 .search input { 

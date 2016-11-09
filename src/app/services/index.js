@@ -1,1 +1,3 @@
-export * from './api';
+export * from './apiService';
+export * from './storageServ';
+export * from './favoriteServ';
