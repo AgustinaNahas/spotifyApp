@@ -1,9 +1,9 @@
 export function favoriteServ(){
     this.favoriteList = [];
 
-    // this.favoriteList.push(new Song('Pensar en nada', 'Los Piojos', 'Huracanes en Luna Plateada'));
-    // this.favoriteList.push(new Song('Juntos', 'Pampa Yakuza', 'Naturaleza Revivir'));
-    // this.favoriteList.push(new Song('Jose Sabía', 'La Vela Puerca', 'De Bichos y Flores'));
+    this.favoriteList.push(new Song('Pensar en nada', 'Los Piojos', 'Huracanes en Luna Plateada'));
+    this.favoriteList.push(new Song('Juntos', 'Pampa Yakuza', 'Naturaleza Revivir'));
+    this.favoriteList.push(new Song('Jose Sabía', 'La Vela Puerca', 'De Bichos y Flores'));
 
     this.addFavorite = function(title, artist, album){
         var fav_song = new Song(title, artist, album);

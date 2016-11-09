@@ -12,7 +12,7 @@
 	<h5 ng-hide="searchCtrl.resultsNotEmpty()">No hay resultados para mostrar</h5>
 	<div class="results-table" ng-repeat="artist in searchCtrl.resultsList">
 		<div class="artist-results">
-			<h5>{{artist.name}}</h5>
+			<a href="/artist" ng-click="selectedArtist(artist.id)" ng-controller="artistCtrl"><h5>{{artist.name}}</h5></a>
 		</div>
 	</div>
 </div>

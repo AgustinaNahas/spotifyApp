@@ -4,7 +4,7 @@ export function searchCtrl($scope, apiService) {
 
     this.search = function(){
     	if(this.stringSearch !== ""){    		
-	        apiService.getResponse(this.stringSearch)
+	        apiService.getResults(this.stringSearch)
 	        .then(function successCallback(response) {
 				this.resultsList = response.data.artists.items;
 			}.bind(this), function errorCallback(response) {
