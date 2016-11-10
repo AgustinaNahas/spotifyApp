@@ -16,5 +16,12 @@ export function apiService($http) {
 		})
 	};
 
+	this.getAlbums = function(id) {
+		return $http({
+			method: 'GET',
+			url: 'https://api.spotify.com/v1/artists/' + id + '/albums',
+		})
+	};
+
 
 }

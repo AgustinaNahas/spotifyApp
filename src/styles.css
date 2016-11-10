@@ -18,23 +18,26 @@ body {
 	width: 99%;
 	height: 98%;
 	position: absolute;
+	padding: 0px;
 	background-color: rgba(255, 255, 255, 0.4);
-}
-
-.main-container {
-	margin: 20px;
 }
 
 .heading {
 	height: 10%;
-	border: 1px solid #dcdcdc;
+	border: 1px solid #549E4D;
 	padding-top: 5px;
 	text-align: center;
 }
 
 .main {
 	height: 78%;
-	border: 1px solid #dcdcdc;
+	border: 1px solid #549E4D;
+	padding: 0px;
+}
+.main-view {
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
 }
 
 p .description {
@@ -43,12 +46,15 @@ p .description {
 
 .footer {
 	height: 10%;
-	border: 1px solid #dcdcdc;
+	border: 1px solid #549E4D;
 }
 
 .header-icon {
 	height: 90%;
 	position: relative;
+	float: left;
+	display: inline-block;
+	margin-left: 10px;
 }
 
 input[type=search] {
@@ -61,7 +67,7 @@ input[type=search] {
 	box-shadow: none;
 	border-radius: none;
 	padding: 10px;
-	border: solid 1px #dcdcdc;
+	border: solid 1px #549E4D;
 	transition: box-shadow 0.3s, border 0.3s;
 }
 
@@ -71,7 +77,7 @@ input[type=search]:focus {
 
 input[type=search]:focus, input[type=search].focus {
 	border: solid 1px #707070;
-	box-shadow: 0 0 5px 1px #969696;
+	box-shadow: 0 0 5px 1px #549E4D;
 }
 
 .search {
@@ -83,7 +89,7 @@ input[type=search]:focus, input[type=search].focus {
 	text-indent: 32px;
 }
 
-.search .material-icons { 
+.search .material-icons {
 	position: absolute;
 	top: 9px;
 	left: 10px;
@@ -93,4 +99,73 @@ input[type=search]:focus, input[type=search].focus {
 	display: inline-block;
 	float: left;
 	width: 33%;
+}
+
+.fav-img {
+	width: 100px;
+}
+
+.art-img {
+	width: 100px;
+}
+
+.artist-img {
+	display: inline-block;
+}
+
+.artist-text {
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.album-img {
+	width: 100px;
+}
+
+.single-album-img {
+	display: inline-block;
+}
+
+.single-album-text {
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.artist-data {
+	margin: 50px;
+}
+
+.favorite-song-img{
+	display: inline-block;
+}
+
+.favorite-song-text{
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.search-container {
+	height: 50%;
+	border: 1px solid #549E4D;
+	margin: 0px;
+	text-align: left;
+	padding: 10px;
+}
+
+.results-container {
+	padding: 10px;
+	height: 50%;
+	margin: 0px;
+	border: 1px solid #549E4D;
+}
+
+.heading .search{
+	position: relative;
+	text-align: right;
+	margin: 0;
+	padding: 0; 
+	width: 50%;
+	display: inline-block;
+	float: right;
+	margin-right: 
 }

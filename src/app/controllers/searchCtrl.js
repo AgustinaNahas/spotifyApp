@@ -19,4 +19,8 @@ export function searchCtrl($scope, apiService) {
     this.resultsNotEmpty = function(){
     	return ($scope.searchCtrl.resultsList.length > 0);
     }
+
+    this.changeView = function(route){
+        $location.path(route);
+    }
 }

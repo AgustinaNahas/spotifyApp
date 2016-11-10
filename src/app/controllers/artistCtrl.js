@@ -1,23 +1,39 @@
-export function artistCtrl($scope, apiService) {
+export function artistCtrl($scope, apiService, $routeParams) {
     $scope.artistCtrl = this;
 
-    this.idArtist;
-
-    this.selectedArtist = function(idArtist){
-        $scope.artistCtrl.idArtist = idArtist;
-    }
+    this.currentArtist = new Artist($routeParams.id, null, null, null, null);
 
     this.getArtist = function(){
-    	if(this.idArtist !== undefined && this.idArtist !== 0){    		
-	        apiService.getArtist(this.idArtist)
+    	if($scope.artistCtrl.currentArtist.id !== undefined && $scope.artistCtrl.currentArtist.id !== 0 && $scope.artistCtrl.currentArtist.id !== null){    		
+	        apiService.getArtist($scope.artistCtrl.currentArtist.id)
 	        .then(function successCallback(response) {
-				console.log(response);
+	        	var a = response.data;
+				$scope.artistCtrl.currentArtist.name = a.name;
+				$scope.artistCtrl.currentArtist.genres = a.genres.join(', ');
+				$scope.artistCtrl.currentArtist.imgs = a.images;
+				$scope.artistCtrl.getAlbums();
+
 			}, function errorCallback(response) {
 				console.log(response);
-				this.resultsList = [];
-			}.bind(this));
+			});
 		} else {
-    		console.log('NADA POR AQUI');
+			console.log(response);
     	}
-    }.bind(this);
+    };
+
+	this.getAlbums = function(){   		
+	        apiService.getAlbums($scope.artistCtrl.currentArtist.id)
+	        .then(function successCallback(response) {
+	        	$scope.artistCtrl.currentArtist.albums = response.data.items;
+	        	console.log($scope.artistCtrl.currentArtist.albums);
+			}, function errorCallback(response) {
+				console.log(response);
+			});
+    };
+
+    this.getArtist();
+
+    this.albumsNotEmpty = function() {
+    	return $scope.artistCtrl.currentArtist.albums.length > 0;
+    }
 }

@@ -8,20 +8,9 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body ng-strict-di>
-    <div class="container">
-    	<div class="heading">
-    		<a href="/#"><img class="header-icon" src="http://www.iconarchive.com/download/i85639/graphicloads/100-flat/zoom-search-2.ico" alt="Spotify search icon"></a>
-    	</div>
-
-	    <div class="main">
-	    	<div ng-view ng-controller="viewCtrl"></div>
-	    </div>
-
-	    <div class="footer">
-	    	
-	    </div>
-    </div>
+    <div class="container" ng-view ng-controller="viewCtrl"></div>
     <script src="/app/song.js"></script>
+    <script src="/app/artist.js"></script>
     <script src="/index.bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>

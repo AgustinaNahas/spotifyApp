@@ -1,6 +1,52 @@
-<div class="band-detail-container" ng-controller="artistCtrl">
-    <img src="https://i.scdn.co/image/66302ca80395b6be3600d5f0ef69db9e0c43f4f5" alt="">
-    <img src="https://i.scdn.co/image/e2b11f82ba8d5aecc6486fe28225db43a003caa1" alt="">
-    <img src="https://i.scdn.co/image/3a299e917835b053f53441280262f10829bd1c8e" alt="">
-    <button ng-click="artistCtrl.getArtist()"></button>
+<div class="heading">
+	<a href="/#"><img class="header-icon" src="http://www.iconarchive.com/download/i85639/graphicloads/100-flat/zoom-search-2.ico" alt="Spotify search icon"></a>
+	<div class="search" ng-controller="viewCtrl">
+        <i class="material-icons">search</i> 
+        <input ng-model="stringSearch"  ng-change="viewCtrl.changeView('/results')" type=search class="input-search" placeholder="Type the name of your favorite artist">
+    </div>
+</div>
+
+<div class="main" ng-controller="artistCtrl" >
+	<div class="artist-container">
+		<div class="artist-data">
+			<div class="artist-img">
+				<img class="art-img" ng-src="{{artistCtrl.currentArtist.imgs[0].url}}" alt="{{artistCtrl.currentArtist.name}}">
+			</div>
+
+			<div class="artist-text">
+				<h1>{{artistCtrl.currentArtist.name}}</h1>
+				<p class="description"><strong>{{artistCtrl.currentArtist.genres}}</strong></p>
+			</div>
+		</div>
+
+		<div class="rute">			
+			<p><a href="/">Home</a> > <a href="/results">Artists</a> > <a href="">{{artistCtrl.currentArtist.name}}</a></p>
+		</div>
+	</div>
+	<div class="albums-container">
+
+		<h2>Albums</h2>
+		
+		<h5 ng-hide="artistCtrl.currentArtist.albumsNotEmpty()">No albums to show</h5>
+		
+		<div class="album-table" ng-repeat="album in artistCtrl.currentArtist.albums">
+			<div class="single-album">
+				<div class="single-album-img">
+					<img class="album-img" ng-src="{{album.images[0].url}}" alt="{{album.name}}">
+				</div>
+				<div class="single-album-text">
+					<div class="albums-results" ng-click="viewCtrl.changeView('/album/' + artist.id)">
+						<h5>{{album.name}}</h5>
+					</div>
+					<p>Year: {{album.artist}}</p>		
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="footer">
+	
 </div>
