@@ -29,8 +29,8 @@
 		
 		<h5 ng-hide="artistCtrl.currentArtist.albumsNotEmpty()">No albums to show</h5>
 		
-		<div class="album-table" ng-repeat="album in artistCtrl.currentArtist.albums">
-			<div class="single-album">
+		<div class="album-table" >
+			<div class="single-album" ng-repeat="album in artistCtrl.currentArtist.albums">
 				<div class="single-album-img">
 					<img class="album-img" ng-src="{{album.images[0].url}}" alt="{{album.name}}">
 				</div>
@@ -38,9 +38,8 @@
 					<div class="albums-results" ng-click="viewCtrl.changeView('/album/' + artist.id)">
 						<h5>{{album.name}}</h5>
 					</div>
-					<p>Year: {{album.artist}}</p>		
+					<p>Year: {{album.year}}</p>		
 				</div>
-
 			</div>
 		</div>
 	</div>

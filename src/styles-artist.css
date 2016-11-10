@@ -1,0 +1,48 @@
+.album-table {
+	overflow-y: scroll;
+	height: 200px;
+}
+
+.single-album {
+	display: inline-block;
+	float: left;
+	width: 33%;
+}
+
+.art-img {
+	width: 100px;
+}
+
+.artist-img {
+	display: inline-block;
+}
+
+.artist-container {
+	height: 30%;
+}
+
+.artist-text {
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.album-img {
+	width: 100px;
+}
+
+.album-container{
+	height: 60%;
+}
+
+.single-album-img {
+	display: inline-block;
+}
+
+.single-album-text {
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.artist-data {
+	margin: 50px;
+}
