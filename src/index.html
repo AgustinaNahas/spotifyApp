@@ -5,16 +5,18 @@
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" href="http://www.iconarchive.com/download/i85639/graphicloads/100-flat/zoom-search-2.ico">
-    <link rel="stylesheet" href="/styles-global.css">
-    <link rel="stylesheet" href="/styles-structure.css">
-    <link rel="stylesheet" href="/styles-favorites.css">
-    <link rel="stylesheet" href="/styles-artist.css">
-    <link rel="stylesheet" href="/styles-search.css">
+    <link rel="stylesheet" href="/app/styles/desktop/styles-global.css">
+    <link rel="stylesheet" href="/app/styles/desktop/styles-structure.css">
+    <link rel="stylesheet" href="/app/styles/desktop/styles-favorites.css">
+    <link rel="stylesheet" href="/app/styles/desktop/styles-artist.css">
+    <link rel="stylesheet" href="/app/styles/desktop/styles-search.css">
+    <link rel="stylesheet" href="/app/styles/desktop/styles-album.css">
 </head>
 <body ng-strict-di>
     <div class="container" ng-view ng-controller="viewCtrl"></div>
-    <script src="/app/song.js"></script>
-    <script src="/app/artist.js"></script>
+    <script src="/app/model/song.js"></script>
+    <script src="/app/model/artist.js"></script>
+    <script src="/app/model/album.js"></script>
     <script src="/index.bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>

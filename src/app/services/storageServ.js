@@ -7,4 +7,7 @@ export function storageServ(){
         var jsonObj = JSON.stringify(list);
         localStorage.setItem(string, jsonObj);
     };
+    this.pop = function(string){
+    	localStorage.removeItem(string);
+    }
 }
