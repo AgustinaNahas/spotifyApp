@@ -25,7 +25,14 @@ export function artistCtrl($scope, apiService, $routeParams) {
 	        apiService.getAlbums($scope.artistCtrl.currentArtist.id)
 	        .then(function successCallback(response) {
 	        	$scope.artistCtrl.currentArtist.albums = response.data.items;
-	        	console.log($scope.artistCtrl.currentArtist.albums);
+	        	$scope.artistCtrl.currentArtist.albums.forEach(function(album){
+	        		apiService.getAlbum(album.id)
+        			.then(function successCallback(response) {
+        				album.year = parseInt(response.data.release_date.substring(0, 4));
+					}, function errorCallback(response) {
+						console.log(response);
+					});
+	        	})
 			}, function errorCallback(response) {
 				console.log(response);
 			});
