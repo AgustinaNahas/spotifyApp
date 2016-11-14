@@ -10,4 +10,12 @@ export function storageServ(){
     this.pop = function(string){
     	localStorage.removeItem(string);
     }
+
+    this.putS = function(string, key){
+        localStorage.setItem(key, string);
+    };
+
+    this.getS = function(key){
+        return localStorage.getItem(key);
+    };
 }

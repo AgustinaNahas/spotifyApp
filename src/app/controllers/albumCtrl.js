@@ -2,7 +2,6 @@ export function albumCtrl($scope, apiService, $routeParams) {
     $scope.albumCtrl = this;
 
     this.currentAlbum = new Album($routeParams.id, null, null, null, null);
-    console.log(this.currentAlbum);
 
 	this.getAlbum = function(){   		
 	        apiService.getAlbum($scope.albumCtrl.currentAlbum.id)
