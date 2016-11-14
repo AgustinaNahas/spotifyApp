@@ -1,8 +1,9 @@
-function Song(title, artist, album, img) {
+function Song(id, name, artists, album, images) {
 	return {
-		title: title,
-		artist: artist,
+		id: id,
+		name: name,
+		artists: artists,
 		album: album,
-		img: img
+		images: images
 	};
 }
