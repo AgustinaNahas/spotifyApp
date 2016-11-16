@@ -11,15 +11,15 @@
 
 		<div class="search">
 			<i class="material-icons">search</i> 
-			<input type=search class="input-search" ng-model="i_search" placeholder="Type the name of your favorite artist" ng-controller="viewCtrl" ng-change="viewCtrl.changeView('/results')">
+			<input type=search class="input-search" ng-model="viewCtrl.i_search" placeholder="Type the name of your favorite artist" ng-controller="viewCtrl" ng-change="viewCtrl.changeView('/results')">
 		</div>
 	</div>
 	<div class="favorites-container" ng-show="favCtrl.has_favorites()">
 		<h2>Favorites</h2>
-		<div class="favorites-table" ng-repeat="song in favCtrl.favorite_list()">
+		<div class="favorites-table" ng-repeat="song in favCtrl.favorites track by $index">
 			<div class="favorite-song">
 				<div class="favorite-song-img">
-					<img class="fav-img" ng-src="{{song.image[0]}}" alt="{{song.name}}">
+					<img class="fav-img" ng-src="{{song.image.url}}" alt="{{song.name}}">
 <!-- 					https://i.scdn.co/image/809c6f28db643023d76b9cb650a8ea59689a3af2 -->
 				</div>
 				<div class="favorite-song-text">

@@ -26,8 +26,14 @@ export function albumCtrl($scope, apiService, $routeParams, favoriteServ, storag
     	}
 	};
 
-	this.addTrackToFavorite = function(id){
-		favoriteServ.addFavorite(id);
+	this.addTrackToFavorite = function(track){
+		track.image = $scope.albumCtrl.currentAlbum.images[0];
+		track.album = $scope.albumCtrl.currentAlbum.name;
+		favoriteServ.addFavorite(track);
+	}
+
+	this.isFavorite(trackId){
+		favoriteServ.isFavorite(trackId);
 	}
     
     this.currentAlbum = new Album($routeParams.id, null, null, null, null);

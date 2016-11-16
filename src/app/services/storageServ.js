@@ -30,9 +30,4 @@ export function storageServ(){
         return JSON.parse(jsonObj);
     }
 
-    this.seeFavorite = function(){
-        var list = localStorage.favorites;
-        return list;
-    }
-
 }

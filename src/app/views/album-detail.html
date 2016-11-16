@@ -28,7 +28,7 @@
 
         <div class="track-table" ng-repeat="track in albumCtrl.currentAlbum.tracks.items">
             <div class="track-results" >
-                <h5 ng-click="albumCtrl.playTrack(track.preview_url)">{{track.name}}</h5> <input type="checkbox" name="favTrack" value="Bike" ng-click="albumCtrl.addTrackToFavorite(track.id)"> Favorite<br>
+                <h5 ng-click="albumCtrl.playTrack(track.preview_url)">{{track.name}}</h5> <input type="checkbox" name="favTrack" ng-model="albumCtrl.isFavorite(track)" ng-click="albumCtrl.addTrackToFavorite(track.id)"> Favorite<br>
             </div>
         </div>
     </div>
