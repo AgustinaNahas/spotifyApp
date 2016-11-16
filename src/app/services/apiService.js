@@ -1,7 +1,5 @@
 export function apiService($http) {
 
-	this.token;
-
 	this.getResults = function(searchField) {
 		return $http({
 			method: 'GET',
@@ -29,6 +27,13 @@ export function apiService($http) {
 			url: 'https://api.spotify.com/v1/albums/' + id,
 		})
 	};
+
+	this.getTrack = function (id) {
+		return $http({
+			method: 'GET',
+			url: 'https://api.spotify.com/v1/tracks/' + id,
+		})
+	}
 
 
 }

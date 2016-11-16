@@ -1,22 +1,40 @@
-export function favoriteServ(storageServ){
-    this.favoriteList = [];
+export function favoriteServ(storageServ, apiService){
+    this.favorites = [];
 
-    this.addFavorite = function(song){
-        var favoriteList = storageServ.get('favorites');
+    this.addFavorite = function(id){
+        // var auxList = [];
+        var auxList = storageServ.getFavorites();
+        if(!auxList) auxList = [];
 
-        this.favoriteList.push(song);
-        storageServ.set(favoriteList, 'favorites');
+        auxList.push(id);
 
-        this.favoriteList = storageServ.get('favorites');
+        storageServ.setFavorites(auxList);
+
+        storageServ.seeFavorites().forEach(this.getTrack);
     }.bind(this);
 
     this.deleteFavorite = function(id){
-        var favoriteList = storageServ.get('favorites');
-        var index = favoriteList.findIndex(song => (song.id == id));
+        var auxList = storageServ.get('favorites');
+        var index = auxList.findIndex(song => (song === id));
 
-        if (index != undefined) favoriteList.splice(index, 1);
-        storageServ.set(favoriteList, 'favorites');
+        if (index !== undefined) auxList.splice(index, 1);
+        storageServ.set(auxList, 'favorites');
         
-        this.favoriteList = storageServ.get('favorites');
+        storageServ.get('favorites').forEach(this.getTrack);
     }.bind(this);
+
+    this.getTrack = function(trackId){
+        apiService.getTrack(trackId)
+        .then(function successCallback(response) {
+            this.favorites.push(response.data);
+        }.bind(this), function errorCallback(response) {
+            console.log("Bad. -> " + response);
+        });
+    }.bind(this);
+
+    this.seeFavorites = function(){
+        storageServ.getFavorites().forEach(this.getTrack);
+        while(storageServ.seeFavorites().legth > this.favorites.length)
+    }.bind(this);
+
 }

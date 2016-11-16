@@ -19,12 +19,12 @@
 		<div class="favorites-table" ng-repeat="song in favCtrl.favorite_list()">
 			<div class="favorite-song">
 				<div class="favorite-song-img">
-					<img class="fav-img" ng-src="{{song.img}}" alt="{{song.title}}">
-					<!-- https://i.scdn.co/image/809c6f28db643023d76b9cb650a8ea59689a3af2 -->
+					<img class="fav-img" ng-src="{{song.image[0]}}" alt="{{song.name}}">
+<!-- 					https://i.scdn.co/image/809c6f28db643023d76b9cb650a8ea59689a3af2 -->
 				</div>
 				<div class="favorite-song-text">
-					<h5>{{song.title}}</h5>
-					<p>Artist: {{song.artist}}</p>
+					<h5>{{song.name}}</h5>
+					<p>Artist: {{song.artists[0].name}}</p>
 					<p>Album: {{song.album}}</p>
 				</div>
 

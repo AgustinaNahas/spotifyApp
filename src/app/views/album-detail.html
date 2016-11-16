@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="rute">          
+        <div class="rute">
             <p><a href="/">Home</a> > <a href="/results">Artists</a> > <a href="/artist/{{albumCtrl.currentAlbum.artists[0].id}}">{{albumCtrl.currentAlbum.artists[0].name}}</a> > <a href="">{{albumCtrl.currentAlbum.name}}</a></p>
         </div>
     </div>
@@ -28,7 +28,7 @@
 
         <div class="track-table" ng-repeat="track in albumCtrl.currentAlbum.tracks.items">
             <div class="track-results" >
-                <h5 ng-click="albumCtrl.playTrack(track.preview_url)">{{track.name}}</h5> <input type="checkbox" name="favTrack" value="Bike" ng-click="albumCtrl.addTrackToFavorite(track)"> Favorite<br>
+                <h5 ng-click="albumCtrl.playTrack(track.preview_url)">{{track.name}}</h5> <input type="checkbox" name="favTrack" value="Bike" ng-click="albumCtrl.addTrackToFavorite(track.id)"> Favorite<br>
             </div>
         </div>
     </div>

@@ -1,11 +1,11 @@
 export function favCtrl($scope, storageServ, favoriteServ) {
     $scope.favCtrl = this;
+	favoriteServ.seeFavorites();
 
-    this.favorite_list = function(){
-        return favoriteServ.favoriteList;
-    }
+	this.favorites = favoriteServ.favorites;
 
     this.has_favorites = function(){
-        return favoriteServ.favoriteList.length > 0;
+    	favoriteServ.seeFavorites();
+        return favoriteServ.favorites.length > 0;
     };
 }

@@ -1,4 +1,5 @@
 export function storageServ(){
+    
     this.get = function(string) {
         var jsonObj = localStorage.getItem(string);
         return JSON.parse(jsonObj);
@@ -18,4 +19,20 @@ export function storageServ(){
     this.getS = function(key){
         return localStorage.getItem(key);
     };
+
+    this.setFavorites = function(list){
+        var jsonObj = JSON.stringify(list);
+        localStorage.favorites = jsonObj;
+    };
+
+    this.getFavorites = function(){
+        var jsonObj = localStorage.favorites;
+        return JSON.parse(jsonObj);
+    }
+
+    this.seeFavorite = function(){
+        var list = localStorage.favorites;
+        return list;
+    }
+
 }
