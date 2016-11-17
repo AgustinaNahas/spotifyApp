@@ -8,16 +8,16 @@ export function storageServ(){
         var jsonObj = JSON.stringify(list);
         localStorage.setItem(string, jsonObj);
     };
-    this.pop = function(string){
-    	localStorage.removeItem(string);
+    this.pop = function(key){
+    	localStorage.removeItem(key);
     }
 
-    this.putS = function(string, key){
-        localStorage.setItem(key, string);
+    this.setSearchString = function(string){
+        localStorage.searchString = string;
     };
 
-    this.getS = function(key){
-        return localStorage.getItem(key);
+    this.getSearchString = function(){
+        return localStorage.searchString;
     };
 
     this.setFavorites = function(list){

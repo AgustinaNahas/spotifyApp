@@ -1,4 +1,4 @@
-.track {
+favorite-song .track {
 	display: inline-block;
 	float: left;
 	width: 31%;
@@ -6,21 +6,26 @@
 	margin: 5px;
 }
 
-.img {
+favorite-song .album-table {
+	overflow-y: scroll;
+	height: 200px;
+}
+
+favorite-song .img {
 	width: 100px;
-	margin-left: 5px;
+	margin: 10px;
 }
 
-.track-img{
+favorite-song .track-img{
 	display: inline-block;
 }
 
-.track-text{
+favorite-song .track-text{
 	margin-left: 5px;
 	display: inline-block;
 }
 
-.track {
+favorite-song .track {
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
@@ -31,7 +36,9 @@
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.track:hover, .track:focus, .track:active {
+favorite-song .track:hover, favorite-song .track:focus, favorite-song .track:active {
   -webkit-transform: translateY(-8px);
   transform: translateY(-8px);
+/*  cursor: pointer;
+  cursor: hand;*/
 }
