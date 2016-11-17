@@ -1,0 +1,13 @@
+
+<div class="table" ng-repeat="track in favCtrl.favorites track by $index">
+	<div class="track">
+		<div class="track-img">
+			<img class="img" ng-src="{{track.image.url}}" alt="{{track.name}}">
+		</div>
+		<div class="song-text">
+			<h5>{{track.name}}</h5>
+			<p>Artist: {{track.artists[0].name}}</p>
+			<p>Album: {{track.album}}</p>
+		</div>
+	</div>
+</div>

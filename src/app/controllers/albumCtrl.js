@@ -7,6 +7,7 @@ export function albumCtrl($scope, apiService, $routeParams, favoriteServ, storag
 	        .then(function successCallback(response) {
 	        	$scope.albumCtrl.currentAlbum = response.data;
 	        	$scope.albumCtrl.currentAlbum.year = parseInt(response.data.release_date.substring(0, 4));
+	        	$scope.albumCtrl.currentAlbum.tracks.items.forEach($scope.albumCtrl.checkFavorite);
 			}, function errorCallback(response) {
 				console.log(response);
 			});
@@ -32,10 +33,14 @@ export function albumCtrl($scope, apiService, $routeParams, favoriteServ, storag
 		favoriteServ.addFavorite(track);
 	}
 
-	this.isFavorite(trackId){
-		favoriteServ.isFavorite(trackId);
+	this.checkFavorite = function(track){
+		track.favorite = favoriteServ.isFavorite(track.id);
 	}
     
     this.currentAlbum = new Album($routeParams.id, null, null, null, null);
     this.getAlbum();
+
+	this.$onDestroy = function () {
+		$scope.albumCtrl.trackPlaying.pause();
+	};
 }

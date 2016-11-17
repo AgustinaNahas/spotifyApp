@@ -18,7 +18,7 @@ export function favoriteServ(storageServ, apiService){
         if(!auxList) auxList = [];
         var index = auxList.findIndex(track => (track.id === trackId));
 
-        if (index !== undefined) auxList.splice(index, 1);
+        if (index !== -1) auxList.splice(index, 1);
         storageServ.setFavorites(auxList);
         
         this.favorites = auxList;
@@ -28,7 +28,7 @@ export function favoriteServ(storageServ, apiService){
         var auxList = storageServ.getFavorites();
         var index = auxList.findIndex(track => (track.id === trackId));
 
-        return (index !== undefined);
+        return (index !== -1);
     }
 
 }

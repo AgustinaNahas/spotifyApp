@@ -7,7 +7,7 @@ export function favCtrl($scope, storageServ, favoriteServ) {
     	$scope.favCtrl.favorites = storageServ.getFavorites();
     }
 
-    this.has_favorites = function(){
+    this.hasFavorites = function(){
         return $scope.favCtrl.favorites.length > 0;
     };
 
