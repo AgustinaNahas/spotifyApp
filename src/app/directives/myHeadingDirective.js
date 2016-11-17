@@ -1,9 +1,6 @@
-export function myHeading () {
+export function myHeadingDirective () {
 	return {
 		restrict: 'E',
-		scope: {
-			showBar: '='
-		},
 		templateUrl: '/app/views/comp/my-heading.html'
 	};
 }

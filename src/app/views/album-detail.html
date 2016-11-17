@@ -1,10 +1,4 @@
-<div class="heading">
-    <a href="/#"><i class="fa fa-spotify fa-2x" aria-hidden="true"></i></a>
-    <div class="search" ng-controller="viewCtrl">
-        <i class="material-icons">search</i> 
-        <input ng-model="stringSearch"  ng-change="viewCtrl.changeView('/results')" type=search class="input-search" placeholder="Type the name of your favorite artist">
-    </div>
-</div>
+<my-heading-bar></my-heading-bar>
 
 <div class="main" ng-controller="albumCtrl" >
     <div class="one-album-container">

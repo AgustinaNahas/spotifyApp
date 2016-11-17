@@ -23,7 +23,8 @@ favorite-song .track-img{
 favorite-song .track-text{
 	margin-left: 5px;
 	display: inline-block;
-	width: 60%;
+	float: right;
+	width: 70%;
 }
 
 favorite-song .track {

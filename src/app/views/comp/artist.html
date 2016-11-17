@@ -1,0 +1,10 @@
+<div class="table" ng-repeat="artist in list">
+	<div class="artist" ng-controller="viewCtrl" ng-click="viewCtrl.changeView('/artist/' + artist.id)">
+		<div class="artist-img">
+			<img class="img" ng-src="{{artist.images[0].url}}" alt="{{artist.name}}">
+		</div>
+		<div class="artist-name" >
+			<h5>{{artist.name}}</h5>
+		</div>
+	</div>
+</div>

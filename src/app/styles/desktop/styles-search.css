@@ -15,6 +15,8 @@ p .description {
 	padding: 10px;
 	height: 50%;
 	margin: 0px;
+	overflow-y: scroll;
+	height: 200px;
 }
 
 .heading .search{
@@ -26,4 +28,46 @@ p .description {
 	display: inline-block;
 	float: right;
 	margin-right: 
+}
+
+artist .artist {
+	display: inline-block;
+	float: left;
+	width: 32%;
+	background-color: rgba(255, 255, 255, 0.4);
+	margin: 5px;
+}
+
+artist .img {
+	width: 100px;
+	margin: 10px;
+}
+
+artist .artist-img{
+	display: inline-block;
+}
+
+artist .artist-name{
+	margin-left: 5px;
+	display: inline-block;
+	float: right;
+	width: 60%;
+}
+
+artist .artist {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+artist .artist:hover, artist .artist:focus, artist .artist:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+  cursor: pointer;
+  cursor: hand;
 }
