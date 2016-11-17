@@ -27,10 +27,14 @@ export function albumCtrl($scope, apiService, $routeParams, favoriteServ, storag
     	}
 	};
 
-	this.addTrackToFavorite = function(track){
-		track.image = $scope.albumCtrl.currentAlbum.images[0];
-		track.album = $scope.albumCtrl.currentAlbum.name;
-		favoriteServ.addFavorite(track);
+	this.manageFavorite = function(track){
+		if(favoriteServ.isFavorite(track.id)){
+			favoriteServ.deleteFavorite(track.id);
+		} else {
+			track.image = $scope.albumCtrl.currentAlbum.images[0];
+			track.album = $scope.albumCtrl.currentAlbum.name;
+			favoriteServ.addFavorite(track);
+		}
 	}
 
 	this.checkFavorite = function(track){
