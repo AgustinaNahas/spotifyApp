@@ -48,3 +48,11 @@
 .one-album-data {
 	margin: 50px;
 }
+
+.track-name{
+	display: inline-block;
+}
+
+.track-fav{
+	display: inline-block;
+}

@@ -1,4 +1,4 @@
-<my-heading-bar></my-heading-bar>
+<my-heading show-bar=true></my-heading>
 
 <div class="main" ng-controller="artistCtrl" >
 	<div class="artist-container">
@@ -13,9 +13,7 @@
 			</div>
 		</div>
 
-		<div class="rute">			
-			<p><a href="/">Home</a> > <a href="/results">Artists</a> > <a href="">{{artistCtrl.currentArtist.name}}</a></p>
-		</div>
+        <route results=true artist="{{albumCtrl.currentAlbum.artists[0]}}" album=undefined></route>
 	</div>
 	<div class="albums-container">
 
@@ -23,23 +21,7 @@
 		
 		<h5 ng-hide="artistCtrl.currentArtist.albumsNotEmpty()">No albums to show</h5>
 		
-		<div class="album-table" >
-			<div class="single-album" ng-repeat="album in artistCtrl.currentArtist.albums">
-				<div class="single-album-img">
-					<img class="album-img" ng-src="{{album.images[0].url}}" alt="{{album.name}}">
-				</div>
-				<div class="single-album-text">
-					<div class="albums-results" ng-click="viewCtrl.changeView('/album/' + album.id)">
-						<h5>{{album.name}}</h5>
-					</div>
-					<p>Year: {{album.year}}</p>		
-				</div>
-			</div>
-		</div>
+		<item list="artistCtrl.currentArtist.albums" show-year=false type="'/album/'"></item>
 	</div>
 
-</div>
-
-<div class="footer">
-	
 </div>

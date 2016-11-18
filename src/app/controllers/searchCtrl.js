@@ -9,7 +9,6 @@ export function searchCtrl($scope, apiService, storageServ) {
             apiService.getResults(this.stringSearch)
             .then(function successCallback(response) {
                 this.resultsList = response.data.artists.items;
-                console.log(this.resultsList);
                 storageServ.setSearchString(this.stringSearch);
             }.bind(this), function errorCallback(response) {
                 console.log(response);
@@ -23,11 +22,11 @@ export function searchCtrl($scope, apiService, storageServ) {
     this.search();
 
     this.resultsNotEmpty = function(){
-    	return ($scope.searchCtrl.resultsList.length > 0);
-    }
+    	return (this.resultsList.length > 0);
+    }.bind(this);
 
     this.changeView = function(route){
-        if($scope.searchCtrl.stringSearch) storageServ.setSearchString($scope.searchCtrl.stringSearch);
+        if(this.stringSearch) storageServ.setSearchString(this.stringSearch);
         $location.path(route);
-    }
+    }.bind(this);
 }

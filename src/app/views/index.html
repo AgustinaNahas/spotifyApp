@@ -1,4 +1,4 @@
-<my-heading showBar="false"></my-heading>
+<my-heading show-bar="false"></my-heading>
 
 <div class="main" ng-controller="favCtrl">
 	<div class="main-search">
@@ -8,7 +8,7 @@
 		<p class="description">Search your favorite songs over Spotify, just enter an artist's name in the following search box and enjoy!</p>
 
 		<div class="search">
-			<i class="material-icons">search</i> 
+			<i class="fa fa-search" aria-hidden="true"></i>
 			<input type=search class="input-search" ng-model="viewCtrl.i_search" placeholder="Type the name of your favorite artist" ng-controller="viewCtrl" ng-change="viewCtrl.changeView('/results')">
 		</div>
 	</div>
@@ -16,9 +16,5 @@
 		<h2>Favorites</h2>
 		<favorite-song tracks="favCtrl.favorites"></favorite-song>
 	</div>
-
-</div>
-
-<div class="footer">
 
 </div>

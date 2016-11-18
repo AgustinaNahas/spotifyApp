@@ -1,50 +1,50 @@
 export function albumCtrl($scope, apiService, $routeParams, favoriteServ, storageServ) {
     $scope.albumCtrl = this;
     this.trackPlaying = new Audio("");
-
-	this.getAlbum = function(){   		
-	        apiService.getAlbum($scope.albumCtrl.currentAlbum.id)
-	        .then(function successCallback(response) {
-	        	$scope.albumCtrl.currentAlbum = response.data;
-	        	$scope.albumCtrl.currentAlbum.year = parseInt(response.data.release_date.substring(0, 4));
-	        	$scope.albumCtrl.currentAlbum.tracks.items.forEach($scope.albumCtrl.checkFavorite);
-			}, function errorCallback(response) {
-				console.log(response);
-			});
-    };
+    
+	this.getAlbum = function(){	
+        apiService.getAlbum(this.currentAlbum.id)
+        .then(function successCallback(response) {
+        	this.currentAlbum = response.data;
+        	this.currentAlbum.year = parseInt(response.data.release_date.substring(0, 4));
+        	this.currentAlbum.tracks.items.forEach(this.checkFavorite);
+		}.bind(this), function errorCallback(response) {
+			console.log(response);
+		});
+    }.bind(this);
 
     this.tracksNotEmpty = function() {
-    	return $scope.albumCtrl.currentAlbum.tracks.items.length > 0;
-    };
+    	return this.currentAlbum.tracks.items.length > 0;
+    }.bind(this);
 
     this.playTrack = function(url) {
-    	if($scope.albumCtrl.trackPlaying.src !== url || $scope.albumCtrl.trackPlaying.paused ){
-    		$scope.albumCtrl.trackPlaying.pause();
-			$scope.albumCtrl.trackPlaying = new Audio(url);
-			$scope.albumCtrl.trackPlaying.play();
+    	if(this.trackPlaying.src !== url || this.trackPlaying.paused ){
+    		this.trackPlaying.pause();
+			this.trackPlaying = new Audio(url);
+			this.trackPlaying.play();
     	} else {
-    		$scope.albumCtrl.trackPlaying.pause();
+    		this.trackPlaying.pause();
     	}
-	};
+	}.bind(this);
 
 	this.manageFavorite = function(track){
 		if(favoriteServ.isFavorite(track.id)){
 			favoriteServ.deleteFavorite(track.id);
 		} else {
-			track.image = $scope.albumCtrl.currentAlbum.images[0];
-			track.album = $scope.albumCtrl.currentAlbum.name;
+			track.image = this.currentAlbum.images[0];
+			track.album = this.currentAlbum.name;
 			favoriteServ.addFavorite(track);
 		}
-	}
+	}.bind(this);
 
 	this.checkFavorite = function(track){
 		track.favorite = favoriteServ.isFavorite(track.id);
 	}
+
+	this.$onDestroy = function () {
+		this.trackPlaying.pause();
+	}.bind(this);
     
     this.currentAlbum = new Album($routeParams.id, null, null, null, null);
     this.getAlbum();
-
-	this.$onDestroy = function () {
-		$scope.albumCtrl.trackPlaying.pause();
-	};
 }

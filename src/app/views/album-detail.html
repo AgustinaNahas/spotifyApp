@@ -1,4 +1,4 @@
-<my-heading-bar></my-heading-bar>
+<my-heading show-bar=true></my-heading>
 
 <div class="main" ng-controller="albumCtrl" >
     <div class="one-album-container">
@@ -13,16 +13,15 @@
             </div>
         </div>
 
-        <div class="rute">
-            <p><a href="/">Home</a> > <a href="/results">Artists</a> > <a href="/artist/{{albumCtrl.currentAlbum.artists[0].id}}">{{albumCtrl.currentAlbum.artists[0].name}}</a> > <a href="">{{albumCtrl.currentAlbum.name}}</a></p>
-        </div>
+        <route results=true artist="{{albumCtrl.currentAlbum.artists[0]}}" album="{{albumCtrl.currentAlbum.name}}"></route>
     </div>
     <div class="track-container">
         <h5 ng-show="albumCtrl.currentAlbum.tracksNotEmpty()">No hay resultados para mostrar</h5>
 
         <div class="track-table" ng-repeat="track in albumCtrl.currentAlbum.tracks.items">
             <div class="track-results" >
-                <h5 ng-click="albumCtrl.playTrack(track.preview_url)">{{track.name}}</h5> <input type="checkbox" name="favTrack" ng-model="track.favorite" ng-click="albumCtrl.manageFavorite(track)"> Favorite<br>
+                <h5 class="track-name" ng-click="albumCtrl.playTrack(track.preview_url)">{{track.name}}</h5> 
+                <input class="track-fav" type="checkbox" name="favTrack" ng-model="track.favorite" ng-click="albumCtrl.manageFavorite(track)"> Favorite<br>
             </div>
         </div>
     </div>

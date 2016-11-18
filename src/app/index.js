@@ -9,8 +9,8 @@ import {storageServ} from './services';
 import {favoriteServ} from './services';
 import {favoriteSongDirective} from './directives';
 import {myHeadingDirective} from './directives';
-import {myHeadingBarDirective} from './directives';
-import {artistDirective} from './directives';
+import {itemDirective} from './directives';
+import {routeDirective} from './directives';
 
 var app = angular.module('mainApp', ['ngRoute'])
     .config(routes)
@@ -24,5 +24,5 @@ var app = angular.module('mainApp', ['ngRoute'])
     .controller('searchCtrl', searchCtrl)
     .directive('favoriteSong', favoriteSongDirective)
     .directive('myHeading', myHeadingDirective)
-    .directive('myHeadingBar', myHeadingBarDirective)
-    .directive('artist', artistDirective);
+    .directive('item', itemDirective)
+    .directive('route', routeDirective);

@@ -1,12 +1,10 @@
-<div class="table">
-	<div class="item" ng-repeat="item in list" ng-controller="viewCtrl" ng-click="viewCtrl.changeView(type + item.id)">
+<div class="table" ng-controller="viewCtrl">
+	<div class="item" ng-repeat="item in list" ng-click="viewCtrl.changeView(type + item.id)">
 		<div class="item-img">
 			<img class="img" ng-src="{{item.images[0].url}}" alt="{{item.name}}">
 		</div>
 		<div class="item-text">
-			<div class="results">
-				<h5>{{item.name}}</h5>
-			</div>
+			<h5>{{item.name}}</h5>
 			<p ng-show="showYear">Year: {{item.year}}</p>
 		</div>
 	</div>
