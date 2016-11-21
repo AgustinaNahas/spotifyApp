@@ -5,5 +5,7 @@ export function myHeadingDirective () {
 		scope:{
 			showBar: "="
 		}
+		controller: viewCtrl,
+		controllerAs: viewCtrl
 	};
 }

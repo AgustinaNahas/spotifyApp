@@ -6,6 +6,8 @@ export function itemDirective () {
 			showYear: '=',
 			type: '='
 		},
-		templateUrl: '/app/views/comp/item.html'
+		templateUrl: '/app/views/comp/item.html',
+		controller: viewCtrl,
+		controllerAs: viewCtrl
 	};
 }
