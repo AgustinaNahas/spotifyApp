@@ -1,4 +1,4 @@
-export function routeDirective () {
+export function breadcrumbsDirective () {
 	return {
 		restrict: 'E',
 		scope: {
@@ -6,6 +6,6 @@ export function routeDirective () {
 			artist: '=', 
 			album: '='
 		},
-		templateUrl: '/app/views/comp/route.html'
+		templateUrl: '/app/views/comp/breadcrumbs.html'
 	};
 }

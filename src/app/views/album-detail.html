@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <route results=true artist="{{albumCtrl.currentAlbum.artists[0]}}" album="{{albumCtrl.currentAlbum.name}}"></route>
+        <breadcrumbs results=true artist="albumCtrl.currentAlbum.artists[0]" album="albumCtrl.currentAlbum.name"></breadcrumbs>
     </div>
     <div class="track-container">
         <h5 ng-show="albumCtrl.currentAlbum.tracksNotEmpty()">No hay resultados para mostrar</h5>
