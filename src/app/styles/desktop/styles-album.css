@@ -1,21 +1,51 @@
-track .name{
-	display: inline-block;
-	width: 300px;
+@media all and (min-width: 1200px) {
+	track .name{
+		display: inline-block;
+		width: 300px;
+	}
+
+	track .fav{
+		display: inline-block;
+	}
+
+	track .track{
+		padding-left: 10px;
+	}
+
+	track .track:hover, track .track:focus, track .track:active {
+		background-color: rgba(255, 255, 255, 0.4);
+		cursor: pointer;
+	  	cursor: hand;
+	}
+
+	track .table {
+		overflow-y: scroll;
+		height: 320px;
+	}
 }
 
-track .fav{
-	display: inline-block;
-}
+@media all and (min-width: 800px) and (max-width: 1199px) {
+	track .name{
+		display: inline-block;
+		width: 300px;
+	}
 
-track .track{
-	padding-left: 10px;
-}
+	track .fav{
+		display: inline-block;
+	}
 
-track .track:hover, track .track:focus, track .track:active {
-	background-color: rgba(255, 255, 255, 0.4)
-}
+	track .track{
+		padding-left: 10px;
+	}
 
-track .table {
-	overflow-y: scroll;
-	height: 320px;
+	track .track:hover, track .track:focus, track .track:active {
+		background-color: rgba(255, 255, 255, 0.4);
+		cursor: pointer;
+	  	cursor: hand;
+	}
+
+	track .table {
+		overflow-y: scroll;
+		height: 320px;
+	}
 }
