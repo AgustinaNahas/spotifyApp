@@ -1,0 +1,6 @@
+<div class="breadcrumbs">
+    <p><a ng-href="/">Home</a>
+    <a ng-href="/results" ng-show="results"> > Artists</a>
+    <a ng-href="/artist/{{artist.id}}" ng-show="(artist !== undefined)"> > {{artist.name}}</a>
+    <a ng-href="/album/{{album.id}}" ng-show="(album !== undefined)"> > {{album.name}}</a></p>
+</div>
