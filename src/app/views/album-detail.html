@@ -1,19 +1,12 @@
 <my-heading show-bar=true></my-heading>
 
-<div class="main">
-    <div class="main-container">
-        <main-item album=true main="albumCtrl.currentAlbum"></main-item>
+<div class="main-container">
+    <main-item album=true main="albumCtrl.currentAlbum"></main-item>
 
-        <breadcrumbs results=true artist="albumCtrl.currentAlbum.artists[0]" album="albumCtrl.currentAlbum"></breadcrumbs>
-    </div>
-    <div class="items-container">
-        <h5 ng-show="albumCtrl.currentAlbum.tracksNotEmpty()">No hay resultados para mostrar</h5>
-
-        <track tracks="albumCtrl.currentAlbum.tracks.items"></track>
-    </div>
-
+    <breadcrumbs results=true artist="albumCtrl.currentAlbum.artists[0]" album="albumCtrl.currentAlbum"></breadcrumbs>
 </div>
+<div class="items-container">
+    <h5 ng-show="albumCtrl.currentAlbum.tracksNotEmpty()">No hay resultados para mostrar</h5>
 
-<div class="footer">
-    
+    <track tracks="albumCtrl.currentAlbum.tracks.items"></track>
 </div>

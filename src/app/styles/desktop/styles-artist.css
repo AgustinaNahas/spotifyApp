@@ -11,19 +11,17 @@ main-item .main-text {
 	display: inline-block;
 }
 
-main-item .main-data {
-	margin: 50px;
-}
-
 .main-container {
 	width: 100%;
 	display: block;
+	height: 20%;
 	text-align: left;
+	padding-left: 50px;
 }
 
 .items-container {
 	width: 100%;
-	height: 30%;
+	height: 50%;
 	display: block;
 }
 
@@ -33,11 +31,12 @@ item .item {
 	width: 32%;
 	background-color: rgba(255, 255, 255, 0.4);
 	margin: 5px;
+	height: 130px;
 }
 
 item .table {
 	overflow-y: scroll;
-	height: 320px;
+	height: 290px;
 }
 
 item .img {

@@ -1,21 +1,19 @@
-<my-heading show-bar="false"></my-heading>
+<my-heading show-bar=false></my-heading>
 
-<div class="main">
-	<div class="search-container">
-		<h1>Artists</h1>
+<div class="search-container">
+	<h1>Artists</h1>
 
-		<p class="description"><strong>You are currently searching: "{{searchCtrl.stringSearch}}"</strong></p>
+	<p class="description"><strong>You are currently searching: "{{searchCtrl.stringSearch}}"</strong></p>
 
-		<div class="search">
-			<i class="fa fa-search" aria-hidden="true"></i>
-			<input ng-model="searchCtrl.stringSearch" ng-change="searchCtrl.search(searchCtrl.stringSearch)" type=search class="input-search" ng-focus="searchCtrl.focusBar" placeholder="Type the name of your favorite artist">
-		</div>
-
-		<breadcrumbs results=true artist=undefined album=undefined></breadcrumbs>
+	<div class="search">
+		<i class="fa fa-search" aria-hidden="true"></i>
+		<input ng-model="searchCtrl.stringSearch" ng-change="searchCtrl.search(searchCtrl.stringSearch)" type=search class="input-search" ng-focus="searchCtrl.focusBar" placeholder="Type the name of your favorite artist">
 	</div>
-	<div class="results-container">
-		<h5 ng-hide="searchCtrl.resultsNotEmpty()">No hay resultados para mostrar</h5>
 
-		<item list="searchCtrl.resultsList" show-year=false type="'/artist/'"></item>
-	</div>
+	<breadcrumbs results=true artist=undefined album=undefined></breadcrumbs>
+</div>
+<div class="results-container">
+	<h5 ng-hide="searchCtrl.resultsNotEmpty()">No hay resultados para mostrar</h5>
+
+	<item list="searchCtrl.resultsList" show-year=false type="'/artist/'"></item>
 </div>

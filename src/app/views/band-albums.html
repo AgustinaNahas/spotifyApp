@@ -1,18 +1,15 @@
 <my-heading show-bar=true></my-heading>
 
-<div class="main">
-	<div class="main-container">
-		<main-item album=false main="artistCtrl.currentArtist"></main-item>
+<div class="main-container">
+	<main-item album=false main="artistCtrl.currentArtist"></main-item>
 
-        <breadcrumbs results=true artist="artistCtrl.currentArtist" album=undefined></breadcrumbs>
-	</div>
-	<div class="items-container">
+    <breadcrumbs results=true artist="artistCtrl.currentArtist" album=undefined></breadcrumbs>
+</div>
+<div class="items-container">
 
-		<h2>Albums</h2>
-		
-		<h5 ng-show="artistCtrl.currentArtist.albumsNotEmpty()">No albums to show</h5>
-		
-		<item list="artistCtrl.currentArtist.albums" show-year=false type="'/album/'"></item>
-	</div>
-
+	<h2>Albums</h2>
+	
+	<h5 ng-show="artistCtrl.currentArtist.albumsNotEmpty()">No albums to show</h5>
+	
+	<item list="artistCtrl.currentArtist.albums" show-year=true type="'/album/'"></item>
 </div>
