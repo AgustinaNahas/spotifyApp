@@ -10,7 +10,7 @@ export function artistCtrl($scope, apiService, $routeParams) {
 	        	var artist = response.data;
 				this.currentArtist.name = artist.name;
 				this.currentArtist.genres = artist.genres.join(', ');
-				this.currentArtist.imgs = artist.images;
+				this.currentArtist.images = artist.images;
 				this.getAlbums();
 			}.bind(this), function errorCallback(response) {
 				console.log(response);

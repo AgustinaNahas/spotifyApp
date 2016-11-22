@@ -1,58 +1,29 @@
-.album-table {
-	overflow-y: scroll;
-	height: 200px;
-}
-
-.single-album {
-	display: inline-block;
-	float: left;
-	width: 33%;
-}
-
-.one-alb-img {
-	width: 100px;
-	position: relative;
-	top: 25px;
-}
-
-.one-album-img {
-	display: inline-block;
-}
-
-.one-album-container {
+.main-container {
 	height: 30%;
 }
 
-.one-album-text {
-	margin-left: 5px;
-	display: inline-block;
-}
-
-.one-album-img {
-	width: 100px;
-}
-
-.album-container{
+.track-container{
 	height: 60%;
 }
 
-.single-album-img {
+track .name{
+	display: inline-block;
+	width: 300px;
+}
+
+track .fav{
 	display: inline-block;
 }
 
-.single-album-text {
-	margin-left: 5px;
-	display: inline-block;
+track .track{
+	padding-left: 10px;
 }
 
-.one-album-data {
-	margin: 50px;
+track .track:hover, track .track:focus, track .track:active {
+	background-color: rgba(255, 255, 255, 0.4)
 }
 
-.track-name{
-	display: inline-block;
-}
-
-.track-fav{
-	display: inline-block;
+track .table {
+	overflow-y: scroll;
+	height: 320px;
 }

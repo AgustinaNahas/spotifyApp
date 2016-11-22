@@ -11,6 +11,8 @@ import {favoriteSongDirective} from './directives';
 import {myHeadingDirective} from './directives';
 import {itemDirective} from './directives';
 import {breadcrumbsDirective} from './directives';
+import {mainItemDirective} from './directives';
+import {trackDirective} from './directives';
 
 var app = angular.module('mainApp', ['ngRoute'])
     .config(routes)
@@ -25,4 +27,6 @@ var app = angular.module('mainApp', ['ngRoute'])
     .directive('favoriteSong', favoriteSongDirective)
     .directive('myHeading', myHeadingDirective)
     .directive('item', itemDirective)
-    .directive('breadcrumbs', breadcrumbsDirective);
+    .directive('breadcrumbs', breadcrumbsDirective)
+    .directive('mainItem', mainItemDirective)
+    .directive('track', trackDirective);

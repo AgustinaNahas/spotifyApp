@@ -27,7 +27,8 @@ export function storageServ(){
 
     this.getFavorites = function(){
         var jsonObj = localStorage.favorites;
-        return JSON.parse(jsonObj);
+        if (jsonObj !== undefined) return JSON.parse(jsonObj);
+        else return [];
     }
 
 }

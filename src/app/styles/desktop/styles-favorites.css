@@ -4,11 +4,12 @@ favorite-song .track {
 	width: 32%;
 	background-color: rgba(255, 255, 255, 0.4);
 	margin: 5px;
+	height: 130px;
 }
 
-favorite-song .album-table {
+favorite-song .table {
 	overflow-y: scroll;
-	height: 200px;
+	height: 300px;
 }
 
 favorite-song .img {
@@ -18,13 +19,14 @@ favorite-song .img {
 
 favorite-song .track-img{
 	display: inline-block;
+	text-align: left;
 }
 
 favorite-song .track-text{
-	margin-left: 5px;
 	display: inline-block;
-	float: right;
-	width: 70%;
+	text-align: left;
+	width: 65%;
+	vertical-align: top;
 }
 
 favorite-song .track {

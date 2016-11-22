@@ -1,9 +1,9 @@
-function Artist(id, name, genres, imgs, albums) {
+function Artist(id, name, genres, images, albums) {
 	return {
 		id: id,
 		name: name,
 		genres: genres,
-		imgs: imgs,
+		images: images,
 		albums: albums
 	};
 }

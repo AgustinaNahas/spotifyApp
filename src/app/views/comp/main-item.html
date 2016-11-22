@@ -1,0 +1,11 @@
+<div class="main-data">
+    <div class="main-img">
+        <img class="img" ng-src="{{main.images[0].url}}" alt="{{main.name}}">
+    </div>
+
+    <div class="main-text">
+        <h1>{{main.name}}</h1>
+        <p class="desc-if-album" ng-show="album"><strong>{{main.artists[0].name}} - {{main.year}}</strong></p>
+        <p class="desc-if-artist" ng-hide="album"><strong>{{main.genres}}</strong></p>
+    </div>
+</div>

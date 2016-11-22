@@ -1,25 +1,16 @@
 <my-heading show-bar=true></my-heading>
 
 <div class="main">
-	<div class="artist-container">
-		<div class="artist-data">
-			<div class="artist-img">
-				<img class="art-img" ng-src="{{artistCtrl.currentArtist.imgs[0].url}}" alt="{{artistCtrl.currentArtist.name}}">
-			</div>
-
-			<div class="artist-text">
-				<h1>{{artistCtrl.currentArtist.name}}</h1>
-				<p class="description"><strong>{{artistCtrl.currentArtist.genres}}</strong></p>
-			</div>
-		</div>
+	<div class="main-container">
+		<main-item album=false main="artistCtrl.currentArtist"></main-item>
 
         <breadcrumbs results=true artist="artistCtrl.currentArtist" album=undefined></breadcrumbs>
 	</div>
-	<div class="albums-container">
+	<div class="items-container">
 
 		<h2>Albums</h2>
 		
-		<h5 ng-hide="artistCtrl.currentArtist.albumsNotEmpty()">No albums to show</h5>
+		<h5 ng-show="artistCtrl.currentArtist.albumsNotEmpty()">No albums to show</h5>
 		
 		<item list="artistCtrl.currentArtist.albums" show-year=false type="'/album/'"></item>
 	</div>

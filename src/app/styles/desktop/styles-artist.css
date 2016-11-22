@@ -1,22 +1,30 @@
-.art-img {
+main-item .img {
 	width: 100px;
 }
 
-.artist-img {
+main-item .main-img {
 	display: inline-block;
 }
 
-.artist-container {
-	height: 30%;
-}
-
-.artist-text {
+main-item .main-text {
 	margin-left: 5px;
 	display: inline-block;
 }
 
-.artist-data {
+main-item .main-data {
 	margin: 50px;
+}
+
+.main-container {
+	width: 100%;
+	display: block;
+	text-align: left;
+}
+
+.items-container {
+	width: 100%;
+	height: 30%;
+	display: block;
 }
 
 item .item {

@@ -1,29 +1,15 @@
 <my-heading show-bar=true></my-heading>
 
 <div class="main">
-    <div class="one-album-container">
-        <div class="one-album-data">
-            <div class="one-album-img">
-                <img class="one-alb-img" ng-src="{{albumCtrl.currentAlbum.images[0].url}}" alt="{{albumCtrl.currentAlbum.name}}">
-            </div>
-
-            <div class="one-album-text">
-                <h1>{{albumCtrl.currentAlbum.name}}</h1>
-                <p class="description"><strong>{{albumCtrl.currentAlbum.artists[0].name}} - {{albumCtrl.currentAlbum.year}}</strong></p>
-            </div>
-        </div>
+    <div class="main-container">
+        <main-item album=true main="albumCtrl.currentAlbum"></main-item>
 
         <breadcrumbs results=true artist="albumCtrl.currentAlbum.artists[0]" album="albumCtrl.currentAlbum"></breadcrumbs>
     </div>
-    <div class="track-container">
+    <div class="items-container">
         <h5 ng-show="albumCtrl.currentAlbum.tracksNotEmpty()">No hay resultados para mostrar</h5>
 
-        <div class="track-table" ng-repeat="track in albumCtrl.currentAlbum.tracks.items">
-            <div class="track-results" >
-                <h5 class="track-name" ng-click="albumCtrl.playTrack(track.preview_url)">{{track.name}}</h5> 
-                <input class="track-fav" type="checkbox" name="favTrack" ng-model="track.favorite" ng-click="albumCtrl.manageFavorite(track)"> Favorite<br>
-            </div>
-        </div>
+        <track tracks="albumCtrl.currentAlbum.tracks.items"></track>
     </div>
 
 </div>

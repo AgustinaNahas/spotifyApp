@@ -2,6 +2,11 @@ html {
 	font-family: 'Droid Sans';
 }
 
+p {
+	font-family: 'Droid Sans';
+	font-size: 14px;
+}
+
 body {
 	background-image: url('http://colrd.com/misc/library/pattern/DinPattern/coaster.gif');
 	background-attachment: fixed;
