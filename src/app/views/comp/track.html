@@ -1,6 +1,7 @@
 <div class="table" >
     <div class="track" ng-repeat="track in tracks">
-        <h5 class="name" ng-click="albumCtrl.playTrack(track.preview_url)">{{track.name}}</h5> 
-        <input class="fav" type="checkbox" name="favTrack" ng-model="track.favorite" ng-click="albumCtrl.manageFavorite(track)"> Favorite<br>
+        <h4 class="name" ng-click="albumCtrl.playTrack(track.preview_url)">{{track.name}}</h4> 
+        <star track="track" ng-click="albumCtrl.manageFavorite(track)"></star>
+        <br>
     </div>
 </div>

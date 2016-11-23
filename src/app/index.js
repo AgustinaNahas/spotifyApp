@@ -13,6 +13,8 @@ import {itemDirective} from './directives';
 import {breadcrumbsDirective} from './directives';
 import {mainItemDirective} from './directives';
 import {trackDirective} from './directives';
+import {cdDirective} from './directives';
+import {starDirective} from './directives';
 
 var app = angular.module('mainApp', ['ngRoute'])
     .config(routes)
@@ -29,4 +31,6 @@ var app = angular.module('mainApp', ['ngRoute'])
     .directive('item', itemDirective)
     .directive('breadcrumbs', breadcrumbsDirective)
     .directive('mainItem', mainItemDirective)
-    .directive('track', trackDirective);
+    .directive('track', trackDirective)
+    .directive('cd', cdDirective)
+    .directive('star', starDirective);

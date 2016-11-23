@@ -9,7 +9,7 @@
 
 		<div class="search">
 			<i class="fa fa-search" aria-hidden="true"></i>
-			<input type=search class="input-search" ng-model="viewCtrl.i_search" placeholder="Type the name of your favorite artist" ng-controller="viewCtrl" ng-change="viewCtrl.changeView('/results')">
+			<input type=search class="input-search" ng-model="viewCtrl.i_search" placeholder="Type the name of your favorite artist" ng-controller="viewCtrl" ng-change="viewCtrl.changeView('/results')" ng-model-options="{ debounce: 1000 }">
 		</div>
 	</div>
 	<div class="fav-container" ng-show="favCtrl.hasFavorites()">

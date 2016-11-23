@@ -1,7 +1,7 @@
 @media all and (min-width: 1200px) {
 	html {
 		font-family: 'Droid Sans';
-		font-size: 1.2em;
+		font-size: 1em;
 	}
 
 	body {
@@ -23,7 +23,7 @@
 		margin: 0;
 		font-family: 'Droid Sans';
 		width: 100%;
-		font-size: 1.2em;
+		font-size: 1em;
 		appearance: none;
 		box-shadow: none;
 		border-radius: none;
@@ -48,12 +48,12 @@
 	}
 
 	.search input { 
-		text-indent: 32px;
+		text-indent: 2em;
 	}
 
 	.search .fa-search {
 		position: absolute;
-		top: 1em;
+		top: 0.8em;
 		left: 0.5em;
 	}
 }
@@ -62,7 +62,7 @@
 
 	html {
 		font-family: 'Droid Sans';
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 
 	body {
@@ -72,7 +72,7 @@
 
 	.container {
 		margin: 0 auto;
-		width: 96%;
+		width: 93%;
 		height: 92%;
 		position: absolute;
 		padding: 20px;
@@ -84,7 +84,66 @@
 		margin: 0;
 		font-family: 'Droid Sans';
 		width: 100%;
-		font-size: 14px;
+		appearance: none;
+		box-shadow: none;
+		border-radius: none;
+		padding: 10px;
+		border: solid 1px #549E4D;
+		transition: box-shadow 0.3s, border 0.3s;
+	}
+
+	input[type=search]:focus {
+		outline: none;
+	}
+
+	input[type=search]:focus, input[type=search].focus {
+		border: solid 1px #707070;
+		box-shadow: 0 0 5px 1px #549E4D; 
+		/*ffffff*/
+	}
+
+	.search {
+		position: relative;
+		width: 97%;
+	}
+
+	.search input { 
+		text-indent: 32px;
+	}
+
+	.search .fa-search {
+		position: absolute;
+		top: 9px;
+		left: 10px;
+	}
+}
+
+@media all and (min-width: 400px) and (max-width: 799px) {
+
+	html {
+		font-family: 'Droid Sans';
+		font-size: 1em;
+	}
+
+	body {
+		background-image: url('http://colrd.com/misc/library/pattern/DinPattern/coaster.gif');
+		background-attachment: fixed;
+	}
+
+	.container {
+		margin: 0 auto;
+		width: 93%;
+		height: 92%;
+		position: absolute;
+		padding: 20px;
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+
+	input[type=search] {
+		display: block;
+		margin: 0;
+		font-family: 'Droid Sans';
+		width: 100%;
 		appearance: none;
 		box-shadow: none;
 		border-radius: none;
