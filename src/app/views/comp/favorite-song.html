@@ -8,5 +8,6 @@
 			<p>Artist: {{track.artists[0].name}}</p>
 			<p>Album: {{track.album}}</p>
 		</div>
+		<i class="fa fa-times" aria-hidden="true" ng-click="favCtrl.manageFavorite(track.id, tracks)"></i>
 	</div>
 </div>

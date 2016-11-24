@@ -1,7 +1,7 @@
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1000px) {
 	track .name{
 		display: inline-block;
-		width: 300px;
+		width: 35em;
 	}
 
 	track .fav{
@@ -9,7 +9,9 @@
 	}
 
 	track .track{
-		padding-left: 10px;
+		margin-top: 0;
+		padding-left: 1.5em;
+		height: 3em;
 	}
 
 	track .track:hover, track .track:focus, track .track:active {
@@ -18,39 +20,42 @@
 	  	cursor: hand;
 	}
 
-	track .table {
+	cd .cdTable{
 		overflow-y: scroll;
-		height: 320px;
+		height: 300px;
 	}
 
-	cd .table{
-		overflow-y: scroll;
-		height: 320px;
-	}
-}
-
-@media all and (min-width: 800px) and (max-width: 1199px) {
-	track .name{
-		display: inline-block;
-		width: 300px;
-	}
-
-	track .fav{
-		display: inline-block;
-	}
-
-	track .track{
-		padding-left: 10px;
-	}
-
-	track .track:hover, track .track:focus, track .track:active {
+	cd .cdName:hover, cd .cdName:focus, cd .cdName:active {
 		background-color: rgba(255, 255, 255, 0.4);
 		cursor: pointer;
 	  	cursor: hand;
 	}
 
+	cd .cdName {
+		height: 3em;
+	}
+
+	cd .cdName h4{
+		position: relative;
+		vertical-align: center;
+		margin-left: 1.5em;
+		display: inline-block;
+		width: 90%;
+	}
+
+	cd .cdName .fa-caret-up{
+		display: inline-block;
+		float: right;
+		margin-right: 1.5em;
+	}
+
+	cd .cdName .fa-caret-down{
+		display: inline-block;
+		float: right;
+		margin-right: 1.5em;
+	}
+
 	track .table {
-		overflow-y: scroll;
-		height: 320px;
+		padding-left: 3em;
 	}
 }

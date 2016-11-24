@@ -4,7 +4,8 @@ export function trackDirective () {
 	return {
 		restrict: 'E',
 		scope: {
-			tracks: '='
+			tracks: '=',
+			index: '='
 		},
 		templateUrl: '/app/views/comp/track.html',
 		controller: albumCtrl

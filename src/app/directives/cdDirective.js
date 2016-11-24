@@ -5,7 +5,8 @@ export function cdDirective () {
 		restrict: 'E',
 		scope: {
 			cds: '=',
-			show: '='
+			criterio:'=',
+			orden:'='
 		},
 		templateUrl: '/app/views/comp/cd.html',
 		controller: albumCtrl

@@ -1,6 +1,10 @@
-<div class="table" >
-    <div class="cd" ng-repeat="cd in cds track by $index">
-        <h4 class="name">CD{{$index}}</h4> 
-        <track tracks="cd"></track>
+<div class="cdTable" >
+    <div class="cd" ng-repeat="cd in cds track by $index" >
+    	<div class="cdName">
+    		<h4 class="name" ng-click="albumCtrl.showHideCD($index)">CD{{$index}}</h4> 
+    		<i class="fa fa-caret-up fa-2x" ng-show="order" ng-click="albumCtrl.changeOrder($index)" aria-hidden="true"></i>
+    		<i class="fa fa-caret-down fa-2x" ng-hide="order" ng-click="albumCtrl.changeOrder($index)" aria-hidden="true"></i>
+    	</div>
+        <track tracks="cd" ng-show="albumCtrl.visibleCDs[$index]" criterio="albumCtrl.criterio[$index]" orden="albumCtrl.orden[$index]"></track>
     </div>
 </div>

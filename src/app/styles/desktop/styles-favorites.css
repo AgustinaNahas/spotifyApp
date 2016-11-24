@@ -49,6 +49,14 @@
 	/*  cursor: pointer;
 	  cursor: hand;*/
 	}
+
+	favorite-song .track .fa-times{
+		position: relative;
+		display: inline-block;
+		float: right;
+		top: 0.2em;
+		left: -0.5em;
+	}
 }
 
 @media all and (min-width: 800px) and (max-width: 1199px) {
@@ -69,7 +77,7 @@
 
 	favorite-song .img {
 		width: 100px;
-		margin: 5px;
+		margin: 10px;
 	}
 
 	favorite-song .track-img{

@@ -7,6 +7,7 @@ import {searchCtrl} from './controllers';
 import {viewCtrl} from './controllers';
 import {storageServ} from './services';
 import {favoriteServ} from './services';
+import {playService} from './services';
 import {favoriteSongDirective} from './directives';
 import {myHeadingDirective} from './directives';
 import {itemDirective} from './directives';
@@ -21,6 +22,7 @@ var app = angular.module('mainApp', ['ngRoute'])
     .service('apiService', apiService)
     .service('storageServ', storageServ)
     .service('favoriteServ', favoriteServ)
+    .service('playService', playService)
     .controller('favCtrl', favCtrl)
     .controller('viewCtrl', viewCtrl)
     .controller('artistCtrl', artistCtrl)
