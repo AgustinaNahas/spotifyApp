@@ -10,10 +10,11 @@
 		<input ng-model="searchCtrl.stringSearch" ng-change="searchCtrl.search(searchCtrl.stringSearch)" type=search class="input-search" ng-focus="searchCtrl.focusBar" placeholder="Type the name of your favorite artist">
 	</div>
 
-	<breadcrumbs results=true artist=undefined album=undefined></breadcrumbs>
 </div>
+
+<breadcrumbs results=true artist=undefined album=undefined></breadcrumbs>
+
 <div class="results-container">
 	<h5 ng-hide="searchCtrl.resultsNotEmpty()">No hay resultados para mostrar</h5>
-
 	<item list="searchCtrl.resultsList" show-year=false type="'/artist/'"></item>
 </div>

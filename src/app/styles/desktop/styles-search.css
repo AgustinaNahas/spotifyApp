@@ -1,6 +1,9 @@
 
 	.search-container {
 		width: 100%;
+		height: 30%;
+		position: relative;
+		size: relative;
 		display: block;
 		text-align: left;
 	}
