@@ -64,7 +64,7 @@ export function albumCtrl($scope, apiService, $routeParams, favoriteServ, storag
 	}
 
 	this.$onDestroy = function () {
-		this.trackPlaying.pause();
+		playService.trackPlaying.pause();
 	}.bind(this);
 
 	this.changeCriteria = function(index){

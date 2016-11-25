@@ -1,10 +1,22 @@
 <div class="cdTable" >
-    <div class="cd" ng-repeat="cd in cds track by $index" >
+    <div class="cd" ng-repeat="cd in cds track by $index" ng-init="parentIndex = $index">
     	<div class="cdName">
-    		<h4 class="name" ng-click="albumCtrl.showHideCD($index)">CD{{$index}}</h4> 
-    		<i class="fa fa-caret-up fa-2x" ng-show="order" ng-click="albumCtrl.changeOrder($index)" aria-hidden="true"></i>
-    		<i class="fa fa-caret-down fa-2x" ng-hide="order" ng-click="albumCtrl.changeOrder($index)" aria-hidden="true"></i>
+    		<h4 class="name" ng-click="albumCtrl.showHideCD(parentIndex)" >CD{{parentIndex}}</h4> 
+    		<i class="fa fa-caret-up fa-2x" ng-show="albumCtrl.orden[parentIndex]" ng-click="albumCtrl.changeOrder(parentIndex)" aria-hidden="true"></i>
+    		<i class="fa fa-caret-down fa-2x" ng-hide="albumCtrl.orden[parentIndex]" ng-click="albumCtrl.changeOrder(parentIndex)" aria-hidden="true"></i>
+    		<i class="fa fa-clock-o fa-2x" ng-show="albumCtrl.criterio[parentIndex] !== 'duration_ms'" ng-click="albumCtrl.changeCriteria(parentIndex)" aria-hidden="true"></i>
+    		<i class="fa fa-sort fa-2x" ng-hide="albumCtrl.criterio[parentIndex] !== 'duration_ms'" ng-click="albumCtrl.changeCriteria(parentIndex)" aria-hidden="true"></i>
     	</div>
-        <track tracks="cd" ng-show="albumCtrl.visibleCDs[$index]" criterio="albumCtrl.criterio[$index]" orden="albumCtrl.orden[$index]"></track>
+
+    	<div class="track-table" ng-show="albumCtrl.visibleCDs[parentIndex]">
+		    <div class="track" ng-repeat="track in cd | orderBy:albumCtrl.criterio[parentIndex]:albumCtrl.orden[parentIndex]"><!--   -->
+		        <h4 class="name">{{track.name}}</h4> 
+		        <i class="fa fa-play" ng-click="albumCtrl.playTrack(track.preview_url)" aria-hidden="true"></i>
+		        <i class="fa fa-pause" ng-click="albumCtrl.pauseTrack(track.preview_url)" aria-hidden="true"></i>
+		        <star track="track" ng-click="albumCtrl.manageFavorite(track)"></star>
+		        <br>
+		    </div>
+		</div>
+
     </div>
 </div>

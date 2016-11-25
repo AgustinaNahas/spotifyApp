@@ -1,20 +1,20 @@
 @media all and (min-width: 1000px) {
-	track .name{
+	.track-table .name{
 		display: inline-block;
 		width: 35em;
 	}
 
-	track .fav{
+	.track-table .fav{
 		display: inline-block;
 	}
 
-	track .track{
+	.track-table .track{
 		margin-top: 0;
 		padding-left: 1.5em;
 		height: 3em;
 	}
 
-	track .track:hover, track .track:focus, track .track:active {
+	.track-table .track:hover, .track-table .track:focus, .track-table .track:active {
 		background-color: rgba(255, 255, 255, 0.4);
 		cursor: pointer;
 	  	cursor: hand;
@@ -55,7 +55,7 @@
 		margin-right: 1.5em;
 	}
 
-	track .table {
+	.track-table {
 		padding-left: 3em;
 	}
 }

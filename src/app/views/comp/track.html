@@ -1,9 +1,0 @@
-<div class="table" >
-    <div class="track" ng-repeat="track in tracks | orderBy:criterio:orden"><!--   -->
-        <h4 class="name">{{track.name}}</h4> 
-        <i class="fa fa-play" ng-click="albumCtrl.playTrack(track.preview_url)" aria-hidden="true"></i>
-        <i class="fa fa-pause" ng-click="albumCtrl.pauseTrack(track.preview_url)" aria-hidden="true"></i>
-        <star track="track" ng-click="albumCtrl.manageFavorite(track)"></star>
-        <br>
-    </div>
-</div>
