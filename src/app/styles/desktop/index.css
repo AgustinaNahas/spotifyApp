@@ -1,0 +1,27 @@
+	.heading {
+		height: 5%;
+		padding-top: 5px;
+		text-align: center;
+	}
+
+	.fa-spotify {
+		position: relative;
+		color: black;
+		float: left;
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	.main-search {
+		height: 25%;
+	}
+
+	.search {
+		height: 5%;
+	}
+
+	.fav-container {
+		position: relative;
+		size: relative;
+		height: 50%;
+	}
